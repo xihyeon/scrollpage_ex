@@ -1,5 +1,4 @@
 @charset "UTF-8";
-a{ color:black;}
 
 /* header */
 #header{
@@ -25,8 +24,18 @@ a{ color:black;}
 
 /* gnb */
 #gnb{
-  float: right;
+  float: right; /*li정렬*/
 }
 #gnb ul{
 overflow: hidden;
+}
+#gnb ul li{
+  float: left;
+}
+
+#gnb ul li a{
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 15px;
 }
