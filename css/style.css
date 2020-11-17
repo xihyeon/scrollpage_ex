@@ -10,3 +10,15 @@ a{ color:black;}
   z-index: 800;
   background: rgba(0,0,0,.3);
 }
+
+/* 상단 로고 */
+#top_log{
+  float: left;
+}
+#top_log a{
+  color: white;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  font-size: 24px;
+}
