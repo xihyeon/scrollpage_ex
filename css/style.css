@@ -39,3 +39,14 @@ overflow: hidden;
   line-height: 60px;
   padding: 0 15px;
 }
+
+/* section */
+section{
+  position: relative;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  min-height: 100vh;
+}
