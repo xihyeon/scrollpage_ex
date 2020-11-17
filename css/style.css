@@ -22,3 +22,11 @@ a{ color:black;}
   padding: 0 20px;
   font-size: 24px;
 }
+
+/* gnb */
+#gnb{
+  float: right;
+}
+#gnb ul{
+overflow: hidden;
+}
