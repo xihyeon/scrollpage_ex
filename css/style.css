@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* common button */
+/*common button 버튼 공통*/
 .button{
   font-size: 16px;
   font-weight: 700;
@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 32px;
-  border-radius: 16px;
+  border-radius: 50px;
   margin: 10px;
   color: white;
   background: #18d26e;
@@ -22,7 +22,30 @@
   color: #18d26e;
 }
 
-/* header */
+.back_to_top{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 10px;
+  background: black;
+  z-index: 800;
+  border-radius: 100%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+
+.back_to_top a{
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*header*/
 #header{
   position: fixed;
   width: 100%;
@@ -32,12 +55,12 @@
   background: rgba(0,0,0,.3);
 }
 
-/* 상단 로고 */
+/*상단 로고*/
 #top_logo{
   float: left;
-  margin-left: 20px;
 }
-#top_log a{
+
+#top_logo a{
   color: white;
   height: 60px;
   line-height: 60px;
@@ -45,13 +68,15 @@
   font-size: 24px;
 }
 
-/* gnb */
+/*gnb*/
 #gnb{
-  float: right; /*li정렬*/
+  float: right;
 }
+
 #gnb ul{
-overflow: hidden;
+  overflow: hidden;/*li 정렬*/
 }
+
 #gnb ul li{
   float: left;
 }
@@ -63,28 +88,129 @@ overflow: hidden;
   padding: 0 15px;
 }
 
-/* section */
+/*section*/
 section{
   position: relative;
   display: flex;
-  -ms-align-items: center;
   align-items: center;
   justify-content: center;
   background: white;
   min-height: 100vh;
+  box-sizing: border-box;
+}
+
+section:nth-child(odd){
+  background: #f9f9f9;
 }
 
 section#intro{
-  background: url("../img/intro/3.jpg");
-  background-repeat: no-repeat;
+  background: url('../img/intro/3.jpg') no-repeat;
   background-size: cover;
+}
+
+section#myprofile{
+  background: url('../img/bg/about_bg.jpg') no-repeat;
+  background-size: cover;
+}
+
+section .row .column .inner{
+  text-align: center;
+}
+
+section#myprofile .row .column .inner .job{
+
+  color: #999999;
+  font-size: 14px;
+}
+
+section#myprofile .row .column .inner img{
+  width: 20%;
+  border-radius: 100%;
+}
+
+section#myprofile:before{
+  content:'';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255,255,255, 0.92);
+  z-index: 9;
+}
+
+section .row .column .inner.none_type{
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+
+section .row .column .inner img.shadow{
+  box-shadow: rgba(0,0,0,.2);
+  box-sizing: border-box;
+  border: 1px solid #f1f1f1;
+  transition: 1s;
+}
+section .row .column .inner img.shadow:hover{
+  box-shadow: none;
+}
+
+/* section row title style */
+
+/* wction row column style */
+section .row .column{
+  font: 25%;
+}
+
+section .row .column .inner{
+  margin: 15px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #f1f1f1;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0,0,0, .2);
+  border-right: 5px;
+}
+section .row .column .inner img{
+  width: 100%;
+}
+
+
+
+section .row{
+  position: relative;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /*wrap을 해야지 내려감 */
+  width: 1410px;
+  color: #333333;
+  padding: 120px 0; /*모바일시 안겹치게 하기위한 */
+  z-index: 500;
+  box-sizing: border-box;
+}
+
+section .row > h2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
 }
 
 section > article{
   text-align: center;
-  padding: 0 20px;
+  padding: 0 20%;
   color: white;
 }
+
+section > article > h2{
+  font-size: 40px;
+}
+
 
 section > article > p{
   font-size: 20px;
