@@ -146,6 +146,15 @@ section#portfolio .row .column .inner img{
   border-radius: 5px;
 }
 
+section#myskill{
+  background: url('../img/bg/my_skill_bg.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#myskill .row > h2,section#myskill .row .column .inner > p{
+  color: white;
+}
+
 section .row .column .inner.none_type{
   border: 0;
   box-shadow: none;
@@ -190,17 +199,113 @@ section .row{
   box-sizing: border-box;
 }
 
+/*section row title style*/
 section .row > h2{
   position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 80px;
   line-height: 80px;
   text-align: center;
 }
 
-/*section row title style*/
+section .row > h2:before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #dddddd;
+  bottom: 1px;
+  left: calc( 50% - 60px );
+}
+
+section .row > h2:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #18d26e;
+  bottom: 0;/* 0 = 0px,0rem,0em,0%,...*/
+  left: calc( 50% - 20px );
+}
+
+/*progress bar sytle*/
+.progressbar .items_wrap{
+  overflow: hidden;
+  color: white;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,.3);
+}
+
+.progressbar .items_wrap:last-child{
+  margin-bottom: 0;
+}
+
+.progressbar .items{
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border-radius: 0 5px 5px 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  box-shadow: 2px 0px 2px rgba(0,0,0,.5);
+  width: 0;
+  height: 45px;
+  line-height: 45px;
+  /*여러줄 들어갈때는 이렇게 들어가면 안됨. 변동사항이 없을때만 */
+}
+
+.progressbar .items .title{
+  float: left;
+  font-size: 700;
+  padding: 6px 0;
+}
+
+.progressbar .items .percent{
+  float: right;
+  padding: 6px 0;
+}
+
+.progressbar .items_wrap:nth-of-type(1) .items{
+  background: #ebaf17;
+}
+
+.progressbar .items_wrap:nth-of-type(2) .items{
+  background: #edd118;
+}
+
+.progressbar .items_wrap:nth-of-type(3) .items{
+  background: #dfed18;
+}
+
+.progressbar .items_wrap:nth-of-type(4) .items{
+  background: #abeb17;
+}
+
+/*animation*/
+section.active .row .column .inner.progressbar .items_wrap:nth-of-type(1) .items{
+ width: 50%;
+ transition: 1s;
+}
+
+section.active .row .column .inner.progressbar .items_wrap:nth-of-type(2) .items{
+ width: 80%;
+ transition: 1s .25s;
+}
+
+section.active .row .column .inner.progressbar .items_wrap:nth-of-type(3) .items{
+ width: 70%;
+ transition: 1s .5s;
+}
+
+section.active .row .column .inner.progressbar .items_wrap:nth-of-type(4) .items{
+ width: 60%;
+ transition: 1s .7s;
+}
+
+
 
 /*section row column style*/
 section .row .column{
@@ -219,4 +324,8 @@ section .row .column .inner{
 
 section .row .column .inner img{
   width: 100%;
+}
+
+#footer{
+  background: pink;
 }
