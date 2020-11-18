@@ -107,7 +107,6 @@ section#intro{
   background: url('../img/intro/3.jpg') no-repeat;
   background-size: cover;
 }
-/*  */
 
 section#myprofile{
   background: url('../img/bg/about_bg.jpg') no-repeat;
@@ -152,6 +151,7 @@ section#myskill{
   background-size: cover;
   background-attachment: fixed;
 }
+
 section#myskill .row > h2,section#myskill .row .column .inner > p{
   color: white;
 }
@@ -255,7 +255,6 @@ section .row > h2:after{
   width: 0;
   height: 45px;
   line-height: 45px;
-  /*여러줄 들어갈때는 이렇게 들어가면 안됨. 변동사항이 없을때만 */
 }
 
 .progressbar .items .title{
@@ -303,7 +302,7 @@ section.active .row .column .inner.progressbar .items_wrap:nth-of-type(3) .items
 
 section.active .row .column .inner.progressbar .items_wrap:nth-of-type(4) .items{
  width: 60%;
- transition: 1s .7s;
+ transition: 1s .75s;
 }
 
 
@@ -328,5 +327,71 @@ section .row .column .inner img{
 }
 
 #footer{
-  background: pink;
+  background: #000000; /*black = #000 = #000000 */
+  color: #ffffff; /*white = #fff = #ffffff*/
+  font-size: 14px;
+}
+
+#footer .footer_top{
+  background: #111111;
+  padding: 60px 0 30px;
+  /*padding-top: 60px; padding-left: 0; padding-right: 0; padding-bottom: 30px;*/
+}
+
+#footer .container{
+  /*footer_top의 .container와 #footer 의 자식요소 .container의 공통스타일 적용*/
+  margin: 0 auto;
+  width: 1140px;
+}
+
+#footer > .container{
+  padding: 30px 0;
+  text-align: center;
+}
+
+#footer .container .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#footer .container .row .column{
+  flex: 25%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+#footer .container .row .column.footer_logo h3{
+  font-size: 34px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 10px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-left: 4px solid #18d26e;
+}
+
+#footer .container .row .column h4{
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+#footer .container .row .column h4::before,#footer .container .row .column h4::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+#footer .container .row .column h4::before{
+  background: #555555;
+}#footer .container .row .column h4::after{
+  background: #18d26e;
 }
