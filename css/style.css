@@ -375,14 +375,14 @@ section .row .column .inner img{
 #footer .container .row .column h4{
   position: relative;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 700;/* 700 = bold */
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform: uppercase;/*대문자 표기*/
   padding-bottom: 12px;
   margin-bottom: 20px;
 }
 
-#footer .container .row .column h4::before,#footer .container .row .column h4::after{
+#footer .container .row .column h4:before, #footer .container .row .column h4:after{
   content: '';
   position: absolute;
   left: 0;
@@ -390,8 +390,41 @@ section .row .column .inner img{
   height: 2px;
 }
 
-#footer .container .row .column h4::before{
+#footer .container .row .column h4:before{
+  right: 0;
   background: #555555;
-}#footer .container .row .column h4::after{
+}
+
+#footer .container .row .column h4:after{
+  width: 60px;
   background: #18d26e;
+}
+
+#footer .container .row .column ul li{
+  border-bottom: 1px solid #333333;
+  padding: 10px 0;
+}
+
+#footer .container .row .column ul li:nth-child(1){
+  padding-top: 0;
+}
+
+#footer .container .row .column p{
+  line-height: 26px;
+}
+
+#footer .container .row .column.news input[type=search]{
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .container .row .column.news input[type=submit]{
+  background: #18d26e;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
 }
