@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*common button 버튼 공통*/
 .button{
   font-size: 16px;
@@ -32,8 +31,11 @@
   z-index: 800;
   border-radius: 100%;
   box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+  opacity: 0;
+  transition: 1s;
 }
 
+.on{ opacity: 1;}
 
 .back_to_top a{
   width: 100%;
@@ -510,10 +512,12 @@ section .row .column .inner img{
   #footer .container .row .column{
     flex: 100%;
   }
+  /*mobile gnb*/
+
   #mobile_close_btn{
     display: block;
   }
-  /*mobile gnb*/
+
   input[type=checkbox]#gnbcheck:checked ~ #header #gnb{
     left: 0;
   }
@@ -545,13 +549,13 @@ section .row .column .inner img{
   #header{
     position: absolute;
   }
+}
 
-  @media screen and ( max-width: 380px ) {
-    section#ourclients .row .column{
-      flex: 100%;
-    }
-    section#mytool .row .column{
-      flex: 100%;
-    }
+@media screen and ( max-width: 380px ) {
+  section#ourclients .row .column{
+    flex: 100%;
+  }
+  section#mytool .row .column{
+    flex: 100%;
   }
 }
