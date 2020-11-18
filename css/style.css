@@ -44,6 +44,60 @@
   justify-content: center;
 }
 
+/*mobile button area*/
+input[type=checkbox]#gnbcheck{ display: none; }
+
+#gnbbtn{
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 900;
+}
+
+/*mobile button line style*/
+#gnbbtn > span{
+  position: absolute;
+  top: 16px;
+  height: 1.6px;
+  width: 32px;
+  background: #ffffff;
+  transform: translateY(-50%);
+}
+
+#gnbbtn > span:nth-child(1){
+  top: 8px;
+}
+
+#gnbbtn > span:nth-child(3){
+  top: 24px;
+}
+
+/*mobile close button*/
+#mobile_close_btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+#mobile_close_btn:before, #mobile_close_btn:after{
+  content: '';
+  position: absolute;
+  height: 1.6px;
+  width: 32px;
+  background: #ffffff;
+  top: 16px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#mobile_close_btn:before{
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 
 /*header*/
 #header{
@@ -427,4 +481,73 @@ section .row .column .inner img{
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+}
+
+/*반응형 css*/
+@media screen and ( max-width: 1200px ) {
+  section .row .column{
+    flex: 50%;
+  }
+  section#myprofile .row .column .inner img{
+    width: 30%;
+  }
+  #footer .container{
+    width: 100%;
+  }
+  #footer .container .row .column{
+    flex: 50%;
+  }
+}
+
+@media screen and ( max-width: 767px ) {
+  section .row .column{
+    flex: 100%;
+  }
+  section#ourclients .row .column, section#mytool .row .column{
+    flex: 50%;
+  }
+  #footer .container .row .column{
+    flex: 100%;
+  }
+  /*mobile gnb*/
+  input[type=checkbox]#gnbcheck:checked ~ #header #gnb{
+    left: 0;
+  }
+
+  #gnbbtn{
+    display: block;
+  }
+
+  #gnb{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 80%;
+    background: rgba(0,0,0,.8);
+    transition: .5s ease-in-out;
+  }
+
+  #gnb ul{
+    padding-top: 50px;
+  }
+
+  #gnb ul li{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  #header{
+    position: absolute;
+  }
+
+  @media screen and ( max-width: 380px ) {
+    section#ourclients .row .column{
+      flex: 100%;
+    }
+    section#mytool .row .column{
+      flex: 100%;
+    }
+  }
 }
